@@ -17,7 +17,7 @@ export default class AppMenu extends React.Component {
 
   render() {
     return (
-      <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+      <Menu mode="horizontal">
         <Menu.Item key="home">
           <Link to="/"><Icon type="home" /></Link>
         </Menu.Item>

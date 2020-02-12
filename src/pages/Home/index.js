@@ -2,6 +2,7 @@ import React from 'react';
 import { Input, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import TopicPreview from '../../components/TopicPreview';
+import data from '../../data';
 const { Search } = Input;
 
 const styles = {
@@ -25,7 +26,7 @@ export default () => {
     </div>
     <div>
       <Row gutter={[48, 48]}>
-        {[...Array(10).keys()].map(i => <Col span={6} key={i}><Link to="/topics/dynamo-db"><TopicPreview /></Link></Col>)}
+        {Object.keys(data).map((k, i) => <Col key={i} span={6}><Link to={`/topics/${k}`}><TopicPreview /></Link></Col>)}
       </Row>
     </div>
   </div>
