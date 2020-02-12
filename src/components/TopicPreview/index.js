@@ -10,15 +10,11 @@ const styles = {
     textAlign: 'center'
   }
 }
-export default () => {
+export default ({ data }) => {
   return <div style={styles.root}>
-    <Card
-      actions={[
-        <Icon type="book" key="setting" />,
-        <Icon type="edit" key="edit" />,
-      ]}>
+    <Card>
       <div style={styles.title}>
-        Dynamo DB
+        {data.title}
       </div>
     </Card>
   </div>

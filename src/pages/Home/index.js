@@ -26,7 +26,7 @@ export default () => {
     </div>
     <div>
       <Row gutter={[48, 48]}>
-        {Object.keys(data).map((k, i) => <Col key={i} span={6}><Link to={`/topics/${k}`}><TopicPreview /></Link></Col>)}
+        {Object.keys(data).map((k, i) => <Col key={i} span={4}><Link to={`/topics/${k}`}><TopicPreview data={data[k]} /></Link></Col>)}
       </Row>
     </div>
   </div>
